@@ -7,19 +7,21 @@
 <body>
   <h1>IE update</h1>
   <!--[if lt IE 9.0]>
+    <script type="text/javascript" src="ieupdate/ieupdate.js"></script>
     <script type="text/javascript">
+      var __noconflict = true;
       (function(d) {
         if(typeof jQuery=='undefined'){
           var IEUPDATE_SCRIPT = d.createElement( 'script' );
           IEUPDATE_SCRIPT.type = 'text/javascript';
           IEUPDATE_SCRIPT.src = '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
+          IEUPDATE_SCRIPT.onload = _IEUPDATE_INIT;
           d.body.appendChild( IEUPDATE_SCRIPT );
-          var __noconflict = true;
+        } else {
+          _IEUPDATE_INIT();
         }
       })(document);
-      var IEUPDATE_OPTIONS = {icons_path:"ieupdate/"};
     </script>
-    <script type="text/javascript" src="ieupdate/ieupdate.min.js"></script>
   <![endif]-->
 </body>
 </html>
