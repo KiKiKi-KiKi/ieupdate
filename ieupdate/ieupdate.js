@@ -56,7 +56,6 @@ try {
 if(window.__noconflict){ jQuery.noConflict();}
 (function($) {
 
-
     $.fn.activebar = function( options ) {
         // Merge the specified options with the default ones
         options = $.fn.extend( {}, $.fn.activebar.defaults, options );
@@ -96,23 +95,34 @@ if(window.__noconflict){ jQuery.noConflict();}
 
         // Show the activebar
         if(options.preload){
-          var load = {a:0, b:0, c:0, d:0}
+          var load = {a:0, b:0, c:0, d:0};
 
-          function preloadInit(){
+          var preloadInit = function() {
             if(load.a && load.b && load.c && load.d){
               $.fn.activebar.show();
             }
-          }
+          };
 
-          $('<img src="'+options.icons_path+'icon.png" class="normal">').load(function(){load.a=1; preloadInit()});
-          $('<img src="'+options.icons_path+'icon-over.png" class="normal">').load(function(){load.b=1; preloadInit()});
-          $('<img src="'+options.icons_path+'close.png" class="normal">').load(function(){load.c=1; preloadInit()});
-          $('<img src="'+options.icons_path+'close-over.png" class="normal">').load(function(){load.d=1; preloadInit()});
+          $('<img src="'+options.icons_path+'icon.png" class="normal">').load(function() {
+            load.a=1;
+            preloadInit();
+          });
+          $('<img src="'+options.icons_path+'icon-over.png" class="normal">').load(function() {
+            load.b=1;
+            preloadInit();
+          });
+          $('<img src="'+options.icons_path+'close.png" class="normal">').load(function() {
+            load.c=1;
+            preloadInit();
+          });
+          $('<img src="'+options.icons_path+'close-over.png" class="normal">').load(function() {
+            load.d=1;
+            preloadInit();
+          });
 
         }else{
           $.fn.activebar.show();
         }
-
     };
 
     /**
@@ -287,7 +297,7 @@ if(window.__noconflict){ jQuery.noConflict();}
         $('body').prepend( container );
 
         return container;
-     };
+     }
 
      /**
       * Set the provided options on the given activebar container object
