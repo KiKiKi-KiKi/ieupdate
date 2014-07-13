@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <title>IE update</title>
 </head>
 <body>
-  <h1>IE 6update</h1>
+  <h1>IE update</h1>
   <!--[if lt IE 9.0]>
     <script type="text/javascript">
-    if(typeof jQuery=='undefined') {
-      document.write("<script type=\"text/javascript\" src=\"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\" defer></"+"script>");
-      var __noconflict = true;
-    }
-    var IE6UPDATE_OPTIONS = {icons_path:"/ie6update/"}
+      (function(d) {
+        if(typeof jQuery=='undefined'){
+        var IEUPDATE_SCRIPT = d.createElement( 'script' );
+        IEUPDATE_SCRIPT.type = 'text/javascript';
+        IEUPDATE_SCRIPT.src = '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
+        d.body.appendChild( IEUPDATE_SCRIPT );
+        var __noconflict = true;
+        }
+      })(document);
+      var IEUPDATE_OPTIONS = {icons_path:"ieupdate/"};
     </script>
-    <script type="text/javascript" src="/ie6update/ie6update.js" defer></script>
+    <script type="text/javascript" src="ieupdate/ieupdate.js" defer></script>
   <![endif]-->
 </body>
 </html>
