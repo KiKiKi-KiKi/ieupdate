@@ -320,8 +320,8 @@ if(window.__noconflict){ jQuery.noConflict();}
 
 
 jQuery(document).ready(function($) {
-  $('<div></div>').html(IE6UPDATE_OPTIONS.message || 'Internet Explorer is missing updates required to view this site. Click here to update... <br/>古いブラウザはセキュリティ上の問題が発生する可能性があります。ここをクリックしてインターネット・エクスプローラのアップデートを行って下さい。')
-  .activebar(window.IE6UPDATE_OPTIONS);
+  $('<div></div>').html(IEUPDATE_OPTIONS.message || 'Internet Explorer is missing updates required to view this site. Click here to update... <br/>古いブラウザはセキュリティ上の問題が発生する可能性があります。ここをクリックしてインターネット・エクスプローラのアップデートを行って下さい。')
+  .activebar(window.IEUPDATE_OPTIONS);
 });
 
 
