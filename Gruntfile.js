@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '/*!\n * IE Alert! jQuery plugin\n * Version 2.1\n * Author: David Nemes | @nmsdvid\n * http://nmsdvid.com/iealert/\n * iealert.js - japanese @Chaika-design <%= grunt.template.today("dd-mm-yyyy") %>\n */\n'
+        banner: '/*!\n * ieupdate.js\n * Version 1.0.0\n * ORIGINAL: IE6Update.js\n * Author: Jakob Westhoff | jakob@php.net\n * Kleiner Floraweg 35\n * 44229 Dortmund\n * Germany\n * http://www.westhoffswelt.de/\n *\n * Fork & customize\n * @chaika-design\n * last updated: <%= grunt.template.today("dd-mm-yyyy") %>\n */\n'
       },
       dist: {
         files: {
