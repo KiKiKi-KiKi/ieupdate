@@ -15,14 +15,15 @@ module.exports = function(grunt) {
         devel: true,
         laxbreak: true,
         // Relaxing Options
-        expr: true
+        expr: true,
+        reporterOutput: ''
       },
-      files: 'ieupdate/ieupdate.js'
+      files: 'src/js/ieupdate.js'
     },
     removelogging: {
       dist: {
-        src: 'ieupdate/ieupdate.js',
-        dest: 'ieupdate/ieupdate-clean.js'
+        src: 'src/js/ieupdate.js',
+        dest: 'src/js/ieupdate-clean.js'
       }
     },
     uglify: {
@@ -31,7 +32,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'ieupdate/ieupdate.min.js': 'ieupdate/ieupdate-clean.js'
+          'src/js/ieupdate.min.js': 'src/js/ieupdate-clean.js'
         }
       }
     },
@@ -43,7 +44,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            src: 'ieupdate/*.min.js',
+            src: 'src/js/*.min.js',
             ext: '.min.js.gz'
           }
         ]
@@ -53,12 +54,12 @@ module.exports = function(grunt) {
       options: {
         force: true
       },
-      js: ['ieupdate/ieupdate-clean.js']
+      js: ['src/js/ieupdate-clean.js']
     },
 
     watch: {
       js: {
-        files: ['ieupdate/ieupdate.js'],
+        files: ['src/js/ieupdate.js'],
         tasks: ['js'],
         options: {
           nospawn: true

@@ -362,7 +362,7 @@ var _IEUPDATE_INIT = function() {
       window.IEUPDATE_OPTIONS = {};
     }
     var _IEUPDATE_OPTIONS = $.extend({}, {
-      icons_path: 'ieupdate/',
+      icons_path: 'ieupdate/src/img/',
       title: 'お使いのインターネット・エクスプローラは最新ではないようです！',
       message: '古いブラウザはセキュリティ上の問題も多数報告されています。多くのサイトを正しくご覧頂くためにも最新のブラウザにアップグレードすることをお勧めします。<br />ココをクリックして最新のブラウザををダウンロードして下さい。'
     }, window.IEUPDATE_OPTIONS);
