@@ -118,19 +118,19 @@ var _IEUPDATE_INIT = function() {
         }
       };
 
-      $('<img src="'+options.icons_path+'icon.png" class="normal">').load(function() {
+      $('<img src="'+options.icons_path+'icon.png" class="normal">').on('load', function() {
         load.a=1;
         preloadInit();
       });
-      $('<img src="'+options.icons_path+'icon-over.png" class="normal">').load(function() {
+      $('<img src="'+options.icons_path+'icon-over.png" class="normal">').on('load', function() {
         load.b=1;
         preloadInit();
       });
-      $('<img src="'+options.icons_path+'close.png" class="normal">').load(function() {
+      $('<img src="'+options.icons_path+'close.png" class="normal">').on('load', function() {
         load.c=1;
         preloadInit();
       });
-      $('<img src="'+options.icons_path+'close-over.png" class="normal">').load(function() {
+      $('<img src="'+options.icons_path+'close-over.png" class="normal">').on('load', function() {
         load.d=1;
         preloadInit();
       });
